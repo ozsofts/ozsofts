@@ -1,0 +1,9 @@
+<li class="in">
+	<img class="avatar" alt="" src="${message.head_img_url!}"/>
+	<div class="message">
+		<span class="arrow"></span>
+		<a href="javascript:;" class="name">${URLDecode(message.nick_name)} </a>
+		<span class="datetime">[${formatDateTime(message.msg_time, "HH:mm:ss")}]</span>
+		<span class="body">${message.content}</span>
+	</div>
+</li>

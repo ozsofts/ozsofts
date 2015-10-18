@@ -1,0 +1,29 @@
+[@override name="content"]
+<div class="row-fluid">
+
+	<div class="messagebox">
+		<div class="list-block-message">
+    		<ul>
+    			[#list MessageService.findMessag() as message]
+        		<li><img src="${message.head_img_url!}" class="icon-member">
+            		<div class="messages">
+                		<div class="arrow-left"></div>
+                		<div class="text">${message.content}</div>
+                	</div>
+            	</li>
+            	[/#list]
+        	</ul>
+    	</div>
+	</div>
+    <div class="memberbox">
+        <div class="list-block-member">
+            <ul>
+               	[#list users as user]
+                <li><img src="${user.head_img_url}"/><p>${user.nickName}</p></li>
+                [/#list]
+            </ul>
+        </div>
+    </div>
+</div>
+[/@override]
+[@extends name="base.html"/]

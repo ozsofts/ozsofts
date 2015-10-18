@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<!--[if IE 8]> <html lang="en" class="ie8 no-js"> <![endif]-->
+<!--[if IE 9]> <html lang="en" class="ie9 no-js"> <![endif]-->
+<!--[if !IE]><!-->
+<html lang="en">
+<!--<![endif]-->
+
+<head>
+<meta charset="utf-8"/>
+<title>互动消息</title>
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<meta http-equiv="Content-type" content="text/html; charset=utf-8">
+
+<link href="http://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=all" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/plugins/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/plugins/simple-line-icons/simple-line-icons.min.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/plugins/bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/plugins/uniform/css/uniform.default.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/plugins/bootstrap-switch/css/bootstrap-switch.min.css" rel="stylesheet" type="text/css"/>
+
+<link href="/r/assets/global/css/components.css" id="style_components" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/global/css/plugins.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/admin/layout/css/layout.css" rel="stylesheet" type="text/css"/>
+<link id="style_color" href="/r/assets/admin/layout/css/themes/darkblue.css" rel="stylesheet" type="text/css"/>
+<link href="/r/assets/admin/layout/css/custom.css" rel="stylesheet" type="text/css"/>
+
+<link rel="shortcut icon" href="favicon.ico"/>
+<style type="text/css">
+.list-line-logo{padding:0 0 0 55px;color:#fafafa; position:relative;}
+.list-line-logo img{width:112px;height:34px;margin:0 5px 5px 0}
+.list-line-logo span{position:absolute; left:0;}
+.chats li{font-size:14px;}
+
+.blog-images{}
+.blog-images li{margin:0 10px;}
+</style>
+</head>
+
+<body class="page-container-bg-solid">
+<div class="container">
+	<h3 class="page-title" style="color:#fff">
+    	现场互动消息 <small>请直接在公众号中输入消息内容</small>
+    </h3>
+	<div class="row">
+    	<div class="col-md-10">
+        	<div class="portlet light">
+                <div class="portlet-title">
+                    <div class="caption">
+                        <i class="icon-bubble font-red-sunglo"></i>
+                        <span class="caption-subject font-red-sunglo bold uppercase">Chats</span>
+                    </div>
+                </div>
+                <!--portlet-title end-->
+                <div class="portlet-body" id="chats">
+							<div class="scroller" style="height:400px;" data-always-visible="1" data-rail-visible1="1">
+								<ul class="chats">
+									[@p.messageList param="test string in html";message]
+									<li class="in">
+	<img class="avatar" alt="" src="${message.head_img_url!}"/>
+	<div class="message">
+		<span class="arrow"></span>
+		<a href="javascript:;" class="name">${URLDecode(message.nick_name)} </a>
+		<span class="datetime">[${formatDateTime(message.msg_time, "HH:mm:ss")}]</span>
+		<span class="body">${message.content}</span>
+	</div>
+</li>
+									[/@p.messageList]
+								</ul>
+							</div>
+					</div>
+            </div>
+            <!--portlet end-->
+        </div>
+        <div class="col-md-2">
+			<div class="dashboard-stat blue-madison" style="margin-left:-5px;">
+                <div class="visual">
+                    <i class="fa fa-comments"></i>
+                </div>
+                <div class="details">
+                    <div class="number">
+                         ${users?size}
+                    </div>
+                    <div class="desc">
+                         已签到人数
+                    </div>
+                </div>
+            </div>
+            <!--dashboard-stat end-->
+            
+            <div class="scroller" style="padding:4px 0 0 0;height:368px;" data-always-visible="1" data-rail-visible1="1">
+            	<ul class="list-inline blog-images">
+                   [#list users as user]
+                    <li>
+                        <a class="fancybox-button" data-rel="fancybox-button" title="${user.nickName}" href="/r/assets/admin/pages/media/blog/1.jpg">
+                        <img alt="" src="${user.head_img_url}">
+                        </a>
+                    </li>
+                    [/#list]
+                </ul>
+            </div>
+        </div>
+	</div>
+	<!--/end row-->
+	<div class="row">
+		<div class="col-md-12">
+        	<div class="list-line-logo">
+        	<span>赞助商：</span>
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo1.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo2.gif">
+        <img src="/r/assets/admin/layout/dataimg/logo3.gif">
+        	</div>
+        </div>
+	</div>
+</div>
+<!-- BEGIN JAVASCRIPTS(Load javascripts at bottom, this will reduce page load time) -->
+<!-- BEGIN CORE PLUGINS -->
+<!--[if lt IE 9]>
+<script src="/r/assets/global/plugins/respond.min.js"></script>
+<script src="/r/assets/global/plugins/excanvas.min.js"></script> 
+<![endif]-->
+<script src="/r/assets/global/plugins/jquery.min.js" type="text/javascript"></script>
+<script src="/r/assets/global/plugins/jquery-migrate.min.js" type="text/javascript"></script>
+<!-- IMPORTANT! Load jquery-ui.min.js before bootstrap.min.js to fix bootstrap tooltip conflict with jquery ui tooltip -->
+<script src="/r/assets/global/plugins/jquery-ui/jquery-ui.min.js" type="text/javascript"></script>
+<script src="/r/assets/global/plugins/bootstrap/js/bootstrap.min.js" type="text/javascript"></script>
+<script src="/r/assets/global/plugins/bootstrap-hover-dropdown/bootstrap-hover-dropdown.min.js" type="text/javascript"></script>
+<script src="/r/assets/global/plugins/jquery-slimscroll/jquery.slimscroll.min.js" type="text/javascript"></script>
+<!-- END CORE PLUGINS -->
+<!-- BEGIN PAGE LEVEL PLUGINS -->
+<script src="/r/assets/global/plugins/countdown/jquery.countdown.min.js" type="text/javascript"></script>
+<script src="/r/assets/global/plugins/backstretch/jquery.backstretch.min.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL PLUGINS -->
+<!-- BEGIN PAGE LEVEL SCRIPTS -->
+<script src="/r/assets/global/scripts/metronic.js" type="text/javascript"></script>
+<script src="/r/assets/admin/layout/scripts/layout.js" type="text/javascript"></script>
+<script src="/r/assets/admin/layout/scripts/quick-sidebar.js" type="text/javascript"></script>
+<script src="/r/assets/admin/layout/scripts/demo.js" type="text/javascript"></script>
+<script src="/r/assets/admin/pages/scripts/coming-soon.js" type="text/javascript"></script>
+<!-- END PAGE LEVEL SCRIPTS -->
+<script>
+jQuery(document).ready(function() {     
+  Metronic.init(); // init metronic core components
+Layout.init(); // init current layout
+QuickSidebar.init(); // init quick sidebar
+Demo.init(); // init demo features
+  ComingSoon.init();
+  // init background slide images
+    $.backstretch([
+            "/r/assets/admin/pages/media/bg/1.jpg",
+            "/r/assets/admin/pages/media/bg/2.jpg",
+            "/r/assets/admin/pages/media/bg/3.jpg",
+   		    "/r/assets/admin/pages/media/bg/4.jpg"
+        ], {
+        fade: 1000,
+        duration: 10000
+   });
+});
+</script>
+<!-- END JAVASCRIPTS -->
+</body>
+<!-- END BODY -->
+</html>

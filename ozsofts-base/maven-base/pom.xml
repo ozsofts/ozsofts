@@ -73,7 +73,6 @@
 			<plugin>
 				<groupId>org.codehaus.mojo</groupId>
 				<artifactId>build-helper-maven-plugin</artifactId>
-				<version>1.8</version>
 				<executions>
 					<execution>
 						<id>add-functional-source</id>
@@ -105,11 +104,13 @@
 			</plugin>
 
 			<!-- enforcer插件, 避免被依赖的依赖引入过期的jar�? -->
+			<!-- 
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-enforcer-plugin</artifactId>
 			</plugin>
-
+			-->
+			
 			<plugin>
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
@@ -119,10 +120,6 @@
 					<username>jack</username>
 					<password>jack</password>
 				</configuration>
-			</plugin>
-			<plugin>
-				<groupId>org.mortbay.jetty</groupId>
-				<artifactId>maven-jetty-plugin</artifactId>
 			</plugin>
 		</plugins>
 
@@ -209,7 +206,7 @@
 				<plugin>
 					<groupId>org.apache.maven.plugins</groupId>
 					<artifactId>maven-war-plugin</artifactId>
-					<version>2.4</version>
+					<version>2.6</version>
 				</plugin>
 
 				<!-- jar打包相关插件 -->

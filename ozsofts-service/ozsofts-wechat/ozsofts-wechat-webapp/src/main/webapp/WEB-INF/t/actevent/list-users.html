@@ -1,0 +1,13 @@
+[@override name="content"]
+    <div class="row-fluid">
+        <div class="wall-title">会员签到</div>
+        <div class="list-line-member-photoes">
+            <ul>
+            	[#list list as user]
+                <li><img src="${user.head_img_url}"/><p>${user.nickName}</p></li>
+                [/#list]
+            </ul>
+        </div>
+    </div>
+[/@override]
+[@extends name="base.html"/]

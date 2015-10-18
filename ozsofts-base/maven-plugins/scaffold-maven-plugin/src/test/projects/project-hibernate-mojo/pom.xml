@@ -1,0 +1,40 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>org.apache.maven.plugin.my.unit</groupId>
+	<artifactId>project-to-test</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<packaging>jar</packaging>
+	<name>Test MyMojo</name>
+
+	<dependencies>
+		<dependency>
+			<groupId>junit</groupId>
+			<artifactId>junit</artifactId>
+			<version>4.11</version>
+			<scope>test</scope>
+		</dependency>
+	</dependencies>
+
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>net.ozsofts.plugins</groupId>
+				<artifactId>scaffold-maven-plugin</artifactId>
+				<configuration>
+					<sourceDirectory>${project.basedir}</sourceDirectory>
+					<beans>
+						<param>net.ozsofts.beans.entity.base.BaseTest1</param>
+						<param>net.ozsofts.beans.entity.base.BaseTest2</param>
+					</beans>
+
+					<sourceDirectory>${project.build.sourceDirectory}</sourceDirectory>
+					<project implementation="net.ozsofts.plugins.mojo.stub.ProjectStub" />
+					<!--settings implementation="net.ozsofts.plugins.mojo.stub.SettingsStub" 
+						/ -->
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

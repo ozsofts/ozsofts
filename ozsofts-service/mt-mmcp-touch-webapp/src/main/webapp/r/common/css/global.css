@@ -1,0 +1,38 @@
+@charset "utf-8";
+/* CSS Document */
+html, body {width: 100%;height: 100%;}
+div,form,img,ul,ol,li,dl,dt,dd,p,button,fieldset{margin: 0; padding: 0; border: 0;}
+body{font-family:"Microsoft Yahei","微软雅黑";margin:0; padding:0;color:#333;line-height:20px;font-size:12px; background:#fff}
+body.bg-color,body.bg-index{background:#F4F4F4}
+ul{list-style:none;}
+img{border:0;font-size:0;overflow:hidden;}
+h1,h2,h3,h4,h5,h6 {margin:0; padding:0;}
+.clear{clear:both;font-size:0;height:0;overflow:hidden;}
+
+.floatL{float:left;}
+.floatR{float:right;}
+
+.hide{display:none}
+.relative{position:relative; margin:0;padding:0;}
+.absolute{position:absolute; margin:0;padding:0;}
+.position-re{position:relative;}
+.text-left{text-align:left;}
+.text-center{text-align:center;}
+.text-right{text-align:right;}
+
+a{text-decoration:none}
+[class^="icon-"], [class*=" icon-"] {display: inline-block;width: auto;height: auto;line-height: normal;background-repeat:no-repeat;background-size:100%;vertical-align:middle}
+li [class^="icon-"], li [class*=" icon-"] {width:24px;text-align: center;}
+
+.back-gray{background:#CCC}
+.back-gray-light{background:#efefef}
+.back-red{background:#ef8476}
+
+@media (max-width:349px) {
+}
+@media (min-width:400px){
+}
+@media (min-width:540px){
+}
+@media (min-width: 980px){
+}
